@@ -1,3 +1,5 @@
+require('../../sass/modules/app.scss');
+
 import React from 'react'
 import { Link } from 'react-router'
 
@@ -21,16 +23,19 @@ class App extends React.Component {
                     {React.cloneElement(this.props.children, { apiResponse: this.props.route.apiResponse })}
                 </main>
                 <footer>
-                    <hr />
-                    <div className="col-sm-12">
-                        <p>
-                            <small>
-                                A REACT and Flickr API task for Mobile5<br />
-                                <span className="text-muted">
-                                    Data loaded from <a href="https://www.flickr.com">Flickr</a> using the <a href="https://www.flickr.com/services/api/">official Flickr API</a> resource <a href={this.props.route.apiResource}>{this.props.route.apiResource}</a>
-                                </span>
-                            </small>
-                        </p>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <p>
+                                    <small>
+                                        A REACT and Flickr API task for Mobile5<br />
+                                        <span className="text-muted">
+                                            Data loaded from <a href="https://www.flickr.com">Flickr</a> using the <a href="https://www.flickr.com/services/api/">official Flickr API</a> resource <a href={this.props.route.apiResource}>{this.props.route.apiResource}</a>
+                                        </span>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </footer>
             </div>

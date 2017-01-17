@@ -1,3 +1,5 @@
+require('../../sass/modules/post.scss');
+
 import React from 'react'
 import { Link } from 'react-router'
 import moment from 'moment'
@@ -21,7 +23,7 @@ class Post extends React.Component{
         authorName = authorName.substr(0, authorName.length-2)
 
         if(this.state.post.tags) {
-            tags = (<p className="text-muted"><br />{'#' + this.state.post.tags.split(' ').join(' #')}</p>)
+            tags = (<p className="text-muted  post__tags">{'#' + this.state.post.tags.split(' ').join(' #')}</p>)
         }
 
         return (
@@ -30,14 +32,13 @@ class Post extends React.Component{
                     <div className="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                         <h1>{this.state.post.title}</h1><br />
 
-                        <div className="thumbnail">
+                        <div className="thumbnail  post__thumbnail">
                             <img
                              src={this.state.post.media.m}
-                             className="img-responsive" 
-                             style={{display: 'block', margin: '0 auto', width: '100%'}}
+                             className="img-responsive  post__img" 
                             />
 
-                            <div className="caption">
+                            <div className="caption  post__caption">
                                 <h2 style={{marginTop: 0}}>
                                     <small> by <a href={'http://www.flickr.com/people/' + this.state.post.author_id}>{authorName}</a></small>
                                 </h2>

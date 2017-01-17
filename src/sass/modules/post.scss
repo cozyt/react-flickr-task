@@ -1,0 +1,22 @@
+.post {}
+
+
+    .post__thumbnail {}
+
+
+        .post__img {
+            width: 100%;
+        }
+
+
+        .post__caption {
+            h2 {
+                margin-bottom: 0;
+            }
+        }
+
+
+            .post__tags {
+                margin-top: 20px;
+                margin-bottom: 0;
+            }

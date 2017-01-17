@@ -1,0 +1,28 @@
+.post-list {}
+
+
+    .post-list__item {}
+
+
+        .post-list__thumbnail {
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+            height: 190px;
+
+
+            @media (min-width: 768px) {
+                height: 120px;
+            }
+        }
+
+
+            .post-list__img {
+                display: block;
+                margin: 0;
+                width: 100%;
+                position: relative;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
+            }

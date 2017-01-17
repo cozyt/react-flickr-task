@@ -1,3 +1,5 @@
+require('../../sass/modules/home.scss');
+
 import React from 'react'
 import { Link } from 'react-router'
 
@@ -21,18 +23,14 @@ class Home extends React.Component{
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row  post-list">
                     {this.state.posts.map((post, i) => 
-                        <div key={i} className="col-xs-6 col-sm-4 col-md-3">
+                        <div key={i} className="col-xs-6 col-sm-4 col-md-3  post-list__item">
                             <Link to={'/post/' + i}> 
-                                <div
-                                 className="thumbnail"
-                                 style={{ position: 'relative', height: 200 }}
-                                >
+                                <div className="thumbnail  post-list__thumbnail">
                                     <img
                                      src={post.media.m}
-                                     className="img-responsive" 
-                                     style={{display: 'block', margin: '0 auto', maxHeight: '100%', position: 'relative', top: '50%', transform: 'translateY(-50%)' }}
+                                     className="img-responsive  post-list__img" 
                                     />
                                 </div>
                             </Link>
